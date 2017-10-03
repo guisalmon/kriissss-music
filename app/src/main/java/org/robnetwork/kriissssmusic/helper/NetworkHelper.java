@@ -31,7 +31,7 @@ public class NetworkHelper {
 
     @Retention(RetentionPolicy.SOURCE)
     @StringDef({ID_BOX, ID_TV, ID_CYKE, ID_ROOM, ID_KRISS, ID_UNSET})
-    @interface SoundSource {
+    public @interface SoundSource {
     }
 
     private RequestQueue mQueue;
