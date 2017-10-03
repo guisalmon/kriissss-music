@@ -11,10 +11,6 @@ import android.widget.RemoteViews;
 import org.robnetwork.kriissssmusic.R;
 import org.robnetwork.kriissssmusic.service.CommandService;
 
-/**
- * Created by Guillaume Salmon on 03/10/2017.
- */
-
 public class NotificationHelper {
     private static final String TAG = NetworkHelper.class.getSimpleName();
 

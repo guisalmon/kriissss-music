@@ -9,10 +9,6 @@ import android.support.annotation.Nullable;
 import org.robnetwork.kriissssmusic.helper.NetworkHelper;
 import org.robnetwork.kriissssmusic.helper.NotificationHelper;
 
-/**
- * Created by Guillaume Salmon on 23/09/2017.
- */
-
 public class CommandService extends Service {
     private static final String EXTRA_ID = "sourceId";
 
