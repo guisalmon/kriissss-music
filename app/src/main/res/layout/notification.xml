@@ -11,7 +11,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
             android:id="@+id/kriss"
             android:clickable="true"
             android:layout_width="0dp"
@@ -21,7 +21,7 @@
             android:background="@color/pinkieDesk"
             android:text="Kriss"/>
 
-        <TextView
+        <Button
             android:id="@+id/room"
             android:clickable="true"
             android:layout_width="0dp"
@@ -31,7 +31,7 @@
             android:background="@color/flutterRoom"
             android:text="Salon"/>
 
-        <TextView
+        <Button
             android:id="@+id/cancel"
             android:clickable="true"
             android:layout_width="0dp"
@@ -49,7 +49,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
             android:id="@+id/box"
             android:clickable="true"
             android:layout_width="0dp"
@@ -59,7 +59,7 @@
             android:background="@color/rarityBox"
             android:text="Box"/>
 
-        <TextView
+        <Button
             android:id="@+id/tv"
             android:clickable="true"
             android:layout_width="0dp"
@@ -69,7 +69,7 @@
             android:background="@color/appleTv"
             android:text="TV"/>
 
-        <TextView
+        <Button
             android:id="@+id/cyke"
             android:clickable="true"
             android:layout_width="0dp"

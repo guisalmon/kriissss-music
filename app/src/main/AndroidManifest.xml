@@ -26,6 +26,7 @@
                 <action android:name="android.net.wifi.STATE_CHANGE"/>
             </intent-filter>
         </receiver>
+        <service android:name=".service.CommandService"/>
     </application>
 
 </manifest>

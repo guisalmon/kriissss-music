@@ -22,23 +22,24 @@ public class NotificationHelper {
 
     public static void createNotification(Context context) {
         RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.notification);
-        remoteViews.setOnClickPendingIntent(R.id.kriss, PendingIntent.getService(context, 0,
+        remoteViews.setOnClickPendingIntent(R.id.kriss, PendingIntent.getService(context, 2,
                 CommandService.getIntent(context, 2), PendingIntent.FLAG_UPDATE_CURRENT));
-        remoteViews.setOnClickPendingIntent(R.id.room, PendingIntent.getService(context, 0,
+        remoteViews.setOnClickPendingIntent(R.id.room, PendingIntent.getService(context, 1,
                 CommandService.getIntent(context, 1), PendingIntent.FLAG_CANCEL_CURRENT));
-        remoteViews.setOnClickPendingIntent(R.id.box, PendingIntent.getService(context, 0,
+        remoteViews.setOnClickPendingIntent(R.id.box, PendingIntent.getService(context, 3,
                 CommandService.getIntent(context, 3), PendingIntent.FLAG_CANCEL_CURRENT));
-        remoteViews.setOnClickPendingIntent(R.id.cancel, PendingIntent.getService(context, 0,
+        remoteViews.setOnClickPendingIntent(R.id.cancel, PendingIntent.getService(context, 6,
                 CommandService.getIntent(context, 0), PendingIntent.FLAG_CANCEL_CURRENT));
-        remoteViews.setOnClickPendingIntent(R.id.cyke, PendingIntent.getService(context, 0,
+        remoteViews.setOnClickPendingIntent(R.id.cyke, PendingIntent.getService(context, 5,
                 CommandService.getIntent(context, 5), PendingIntent.FLAG_CANCEL_CURRENT));
-        remoteViews.setOnClickPendingIntent(R.id.tv, PendingIntent.getService(context, 0,
+        remoteViews.setOnClickPendingIntent(R.id.tv, PendingIntent.getService(context, 4,
                 CommandService.getIntent(context, 4), PendingIntent.FLAG_CANCEL_CURRENT));
 
         Notification notification = new NotificationCompat.Builder(context)
                 .setOngoing(true)
                 .setCustomBigContentView(remoteViews)
                 .setSmallIcon(android.R.drawable.ic_media_play)
+                .setPriority(Notification.PRIORITY_MAX)
                 .build();
 
         NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);

@@ -3,6 +3,7 @@ package org.robnetwork.kriissssmusic.viewmodel;
 import android.util.Log;
 
 import org.robnetwork.kriissssmusic.helper.NetworkHelper;
+import org.robnetwork.kriissssmusic.helper.NotificationHelper;
 
 import cz.kinst.jakub.viewmodelbinding.ViewModel;
 
@@ -13,7 +14,7 @@ public class MainActivityVM extends ViewModel {
     public void onViewModelCreated() {
         super.onViewModelCreated();
         NetworkHelper.start(getContext());
-
+        NotificationHelper.createNotification(getContext());
     }
 
     @Override
