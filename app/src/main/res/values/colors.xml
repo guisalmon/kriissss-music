@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d19fe4</color>
+    <color name="colorPrimaryDark">#9f70b2</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="pinkieDesk">#e9698a</color>
+    <color name="appleTv">#eba54f</color>
+    <color name="flutterRoom">#e8e19b</color>
+    <color name="rainbowDesk">#8bc7e3</color>
+    <color name="rarityBox">#c5cfe8</color>
+    <color name="black">#111517</color>
+</resources>
