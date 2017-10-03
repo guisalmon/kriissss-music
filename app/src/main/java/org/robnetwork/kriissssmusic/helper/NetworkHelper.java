@@ -59,8 +59,7 @@ public class NetworkHelper {
 
     public static void setSoundSource(@NetworkHelper.SoundSource String id) {
         if (sHelper != null && sHelper.mQueue != null){
-            sHelper.mQueue.add(new StringRequest(Request.Method.GET,
-                    ENDPOINT + id,
+            sHelper.mQueue.add(new StringRequest(Request.Method.GET, ENDPOINT + id,
                     mListener, mErrorListener));
         } else {
             Log.w(TAG, "NetworkHelper not started ! ");
@@ -68,7 +67,7 @@ public class NetworkHelper {
     }
 
     public static @SoundSource String getCurrentSource() {
-        Log.e(TAG, "Not implemented yet");
+        Log.w(TAG, "Not implemented yet");
         return ID_UNSET;
     }
 
