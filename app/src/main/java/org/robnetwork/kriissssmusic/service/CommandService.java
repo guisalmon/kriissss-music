@@ -10,8 +10,6 @@ import android.support.annotation.Nullable;
  */
 
 public class CommandService extends Service {
-    private static int NOTIFICATION_ID = 42;
-
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -20,6 +18,6 @@ public class CommandService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        return START_STICKY_COMPATIBILITY;
+        return START_NOT_STICKY;
     }
 }

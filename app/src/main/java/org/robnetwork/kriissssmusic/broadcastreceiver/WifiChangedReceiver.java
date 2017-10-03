@@ -7,6 +7,8 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.util.Log;
 
+import org.robnetwork.kriissssmusic.helper.NotificationHelper;
+
 /**
  * Created by Guillaume Salmon on 03/10/2017.
  */
@@ -23,7 +25,9 @@ public class WifiChangedReceiver extends BroadcastReceiver {
         WifiInfo info = wifiManager.getConnectionInfo ();
         if (info.getBSSID() != null && info.getBSSID().equals(MAC_BOX)) {
             Log.i(TAG, "Home is where the wifi is ! ");
-
+            NotificationHelper.createNotification(context);
+        } else {
+            NotificationHelper.dismissNotification(context);
         }
     }
 }
