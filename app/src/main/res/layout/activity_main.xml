@@ -1,124 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="viewModel"
-            type="org.robnetwork.kriissssmusic.viewmodel.MainActivityVM"/>
+            type="org.robnetwork.kriissssmusic.viewmodel.MainActivityVM" />
     </data>
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
+            android:visibility="@{viewModel.isAtHome ? View.VISIBLE : View.GONE}"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@color/rarityBox">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="match_parent"
+                <FrameLayout
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:onClick="@{() -> viewModel.onClickBox()}"
-                    android:text="Freebox"
-                    android:textAppearance="@style/AppTheme.TextBig"
-                    android:textAlignment="center"/>
-            </FrameLayout>
+                    android:layout_weight="1"
+                    android:background="@color/rarityBox">
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="@{() -> viewModel.onClickBox()}"
+                        android:text="Freebox"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/AppTheme.TextBig" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/appleTv">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="@{() -> viewModel.onClickTv()}"
+                        android:text="Tv"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/AppTheme.TextBig" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/rainbowDesk">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="@{() -> viewModel.onClickCyke()}"
+                        android:text="Cyke"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/AppTheme.TextBig" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@color/appleTv">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="match_parent"
+                <FrameLayout
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:onClick="@{() -> viewModel.onClickTv()}"
-                    android:text="Tv"
-                    android:textAppearance="@style/AppTheme.TextBig"
-                    android:textAlignment="center"/>
-            </FrameLayout>
+                    android:layout_weight="1"
+                    android:background="@color/pinkieDesk">
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="@color/rainbowDesk"
-                android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:onClick="@{() -> viewModel.onClickKriss()}"
+                        android:text="Kriss"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/AppTheme.TextBig" />
+                </FrameLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
+                <FrameLayout
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:onClick="@{() -> viewModel.onClickCyke()}"
-                    android:text="Cyke"
-                    android:textAppearance="@style/AppTheme.TextBig"
-                    android:textAlignment="center"/>
+                    android:layout_weight="1"
+                    android:background="@color/flutterRoom">
 
-            </FrameLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="@{() -> viewModel.onClickRoom()}"
+                        android:text="Salon"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/AppTheme.TextBig" />
+                </FrameLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
 
-
-        <LinearLayout
+        <FrameLayout
+            android:visibility="@{viewModel.isAtHome ? View.GONE : View.VISIBLE}"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_bg">
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="@color/pinkieDesk"
-                android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:text="NOPE\nYou're not in equestria"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="?attr/selectableItemBackground"
-                    android:gravity="center"
-                    android:onClick="@{() -> viewModel.onClickKriss()}"
-                    android:text="Kriss"
-                    android:textAppearance="@style/AppTheme.TextBig"
-                    android:textAlignment="center"/>
-            </FrameLayout>
+            <ImageView
+                android:id="@+id/flutter_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:scaleType="fitCenter"/>
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/flutterRoom">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:onClick="@{() -> viewModel.onClickRoom()}"
-                    android:text="Salon"
-                    android:textAppearance="@style/AppTheme.TextBig"
-                    android:textAlignment="center"/>
-            </FrameLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
 </layout>
