@@ -41,8 +41,7 @@ public class MainActivityVM extends ViewModel {
     @Override
     public void onViewAttached(boolean firstAttachment) {
         super.onViewAttached(firstAttachment);
-        if (!isAtHome.get()
-                && getActivity() != null
+        if (getActivity() != null
                 && getActivity() instanceof MainActivity
                 && ((MainActivity) getActivity()).getBinding() != null) {
             Glide.with(getContext())
